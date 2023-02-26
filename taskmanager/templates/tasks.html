@@ -19,9 +19,16 @@
         {% endif %}
         <div class="collapsible-body"><span><strong>{{ task.category }}</strong>
             <p> {{ task.task_description}} </p>
-          </span></div>
-      </li>
-    </ul>
+          </span>
+        
+    <div class="card-action">
+      <a href="{{ url_for('edit_task', task_id=task.id) }}" class="btn green accent-4">Edit</a>
+      <a href="#" class="btn red modal-trigger">Delete</a>
+    </div>
+  </li>
+  </div>
+</ul>
+
     {% endfor %}
   </div>
 
